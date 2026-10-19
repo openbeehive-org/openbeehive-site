@@ -1,9 +1,10 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n';
-  import { changeLanguage, SUPPORTED, LANG_LABELS } from '$lib/i18n';
-  import { APP_URL, DEMO_URL, DOCS_URL, GITHUB_URL, SITE_URL } from '$lib/config';
-  import Footer from '$lib/components/Footer.svelte';
-  import Seo from '$lib/components/Seo.svelte';
+  import { changeLanguage, SUPPORTED, LANG_LABELS } from '#lib/i18n/index.js';
+  import { APP_URL, DEMO_URL, DOCS_URL, GITHUB_URL, SITE_URL } from '#lib/config.js';
+  import Footer from '#lib/components/Footer.svelte';
+  import Seo from '#lib/components/Seo.svelte';
+  import Icon, { ARROW_OUT, HEX } from '#lib/components/Icon.svelte';
 
   // Structured data for search engines and AI crawlers (English-only is fine).
   const jsonLd = JSON.stringify([
@@ -18,7 +19,7 @@
       license: 'https://www.gnu.org/licenses/agpl-3.0.html',
       sameAs: [GITHUB_URL],
       description:
-        'Offline-first, open-source beekeeping records: apiaries, hives, queens, inspections, treatments and harvests — hosted or self-hosted.'
+        'Offline-first, open-source beekeeping records: apiaries, hives, queens, inspections, treatments and harvests, hosted or self-hosted.'
     },
     {
       '@context': 'https://schema.org',
@@ -42,11 +43,20 @@
     { t: 'landing.feature_selfhost_title', d: 'landing.feature_selfhost_text' },
     { t: 'landing.feature_api_title', d: 'landing.feature_api_text' }
   ];
+
+  // Phone mock-up tab bar: home, list, grid, menu, more.
+  const TAB_ICONS = [
+    HEX,
+    'M4 5h16v14H4zM4 10h16M4 15h16',
+    'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
+    'M4 7h16M4 12h16M4 17h16',
+    'M6 12h.01M12 12h.01M18 12h.01'
+  ];
 </script>
 
 <Seo
-  title="Openbeehive — free, open-source beekeeping records"
-  description="Free, open-source beekeeping records. Offline-first hive management: inspections, queens, treatments and harvests — for hobby and professional beekeepers."
+  title="Openbeehive: free, open-source beekeeping records"
+  description="Free, open-source beekeeping records. Offline-first hive management: inspections, queens, treatments and harvests, for hobby and professional beekeepers."
   path="/"
 />
 
@@ -58,7 +68,7 @@
 
 <header class="bar">
   <a class="brand" href="/">
-    <span class="mark">⬡</span>
+    <span class="mark"><Icon d={HEX} /></span>
     <div>
       <strong>{$_('app.name')}</strong>
       <small>{$_('app.tagline')}</small>
@@ -87,7 +97,9 @@
 <main>
   <section class="hero">
     <div class="hex-field" aria-hidden="true"></div>
-    <span class="badge">🐝 {$_('landing.badge')}</span>
+    <span class="badge"
+      ><img src="/favicon.svg" alt="" width="16" height="16" />{$_('landing.badge')}</span
+    >
     <h1>{$_('landing.hero_title')}</h1>
     <p>{$_('landing.hero_sub')}</p>
     <div class="cta">
@@ -107,7 +119,7 @@
     <div class="phone" aria-hidden="true">
       <div class="phone-screen">
         <div class="m-head">
-          <span class="m-mark">⬡</span>
+          <span class="m-mark"><Icon d={HEX} /></span>
           <strong>{$_('nav.dashboard')}</strong>
         </div>
         <div class="m-stats">
@@ -127,7 +139,9 @@
           </div>
         </div>
         <div class="m-tabbar">
-          <span class="on">⬡</span><span>▤</span><span>▣</span><span>☰</span><span>•</span>
+          {#each TAB_ICONS as d, i (d)}
+            <span class:on={i === 0}><Icon {d} /></span>
+          {/each}
         </div>
       </div>
     </div>
@@ -161,7 +175,7 @@
         <p>{$_('landing.opensource_text')}</p>
       </div>
       <a class="btn ghost light" href={GITHUB_URL} rel="noopener" target="_blank"
-        >{$_('landing.opensource_cta')} ↗</a
+        >{$_('landing.opensource_cta')} <Icon d={ARROW_OUT} /></a
       >
     </div>
   </section>
@@ -171,7 +185,7 @@
     <h2>{$_('landing.selfhost_title')}</h2>
     <p>{$_('landing.selfhost_text')}</p>
     <code>docker compose up -d &nbsp;·&nbsp; DEPLOYMENT_PROFILE=selfhost</code>
-    <p class="docs-link"><a href={DOCS_URL}>{$_('nav.docs')} ↗</a></p>
+    <p class="docs-link"><a href={DOCS_URL}>{$_('nav.docs')} <Icon d={ARROW_OUT} /></a></p>
   </section>
 
   <!-- Final CTA -->
@@ -283,7 +297,9 @@
     overflow: hidden;
   }
   .badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     background: var(--cream2);
     border: 1px solid var(--line);
     color: var(--ink-soft);
@@ -291,6 +307,9 @@
     font-size: 0.8rem;
     padding: 6px 14px;
     border-radius: 999px;
+  }
+  .badge img {
+    border-radius: 4px;
     margin-bottom: 22px;
   }
   .hero h1 {
@@ -382,6 +401,7 @@
     padding: 4px 4px 12px;
   }
   .m-mark {
+    display: inline-flex;
     color: var(--honey);
     font-size: 1.2rem;
   }
@@ -444,6 +464,10 @@
     padding: 14px 16px 4px;
     color: var(--ink-soft);
     opacity: 0.6;
+  }
+  .m-tabbar span {
+    display: inline-flex;
+    font-size: 1.1rem;
   }
   .m-tabbar .on {
     color: var(--honey);

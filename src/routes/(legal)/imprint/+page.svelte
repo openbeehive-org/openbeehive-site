@@ -1,11 +1,11 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
-  import Seo from '$lib/components/Seo.svelte';
+  import Seo from '#lib/components/Seo.svelte';
 </script>
 
 <Seo
   title="Imprint · Openbeehive"
-  description="Legal notice (Impressum) for openbeehive.org — operator identity and contact details for the Openbeehive project."
+  description="Legal notice (Impressum) for openbeehive.org: operator identity and contact details for the Openbeehive project."
   path="/imprint"
 />
 

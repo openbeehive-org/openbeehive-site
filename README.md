@@ -26,7 +26,7 @@ npm run preview    # serve the production build locally on :4174
 
 The `build/` directory is plain static HTML/CSS/JS — host it on any static
 host or CDN (Netlify, Cloudflare Pages, GitHub Pages, S3, nginx, …). Uses
-`@sveltejs/adapter-static` with full prerendering (see `svelte.config.js`).
+`@sveltejs/adapter-static` with full prerendering (see `vite.config.ts`).
 
 ## Layout
 

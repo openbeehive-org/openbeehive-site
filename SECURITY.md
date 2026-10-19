@@ -14,6 +14,6 @@ policy in the `openbeehive-app` repository.
 
 Please do not open a public issue. Use GitHub's
 [private vulnerability reporting](https://github.com/openbeehive-org/openbeehive-site/security/advisories/new)
-or email **security@johanneskueber.com**. Include a description and, if you
+or email **security@openbeehive.org**. Include a description and, if you
 can, steps to reproduce. Reports are acknowledged within a few days; only the
 currently deployed site (https://openbeehive.org) is supported.

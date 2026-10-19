@@ -1,11 +1,11 @@
 import { get } from 'svelte/store';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-// The module keeps "initialized" state and reads $app/environment; reload it per test.
+// The module keeps "initialized" state and reads $app/env; reload it per test.
 // svelte-i18n is reloaded too, so its stores come from the same instance the module uses.
 async function load(browser: boolean, saved: string | null, navigator?: string) {
   vi.resetModules();
-  vi.doMock('$app/environment', () => ({ browser }));
+  vi.doMock('$app/env', () => ({ browser }));
   vi.doMock('svelte-i18n', async (importOriginal) => {
     const original = await importOriginal<typeof import('svelte-i18n')>();
     return { ...original, getLocaleFromNavigator: () => navigator ?? null };
@@ -24,7 +24,7 @@ async function load(browser: boolean, saved: string | null, navigator?: string) 
 describe('i18n', () => {
   afterEach(() => {
     vi.unstubAllGlobals();
-    vi.doUnmock('$app/environment');
+    vi.doUnmock('$app/env');
     vi.doUnmock('svelte-i18n');
   });
 
