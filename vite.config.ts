@@ -1,8 +1,20 @@
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 
+// Fully static marketing site, prerendered to plain HTML for openbeehive.org; the app lives in its own repo.
 export default defineConfig({
-  plugins: [sveltekit()],
+  plugins: [
+    sveltekit({
+      preprocess: vitePreprocess(),
+      adapter: adapter({
+        pages: 'build',
+        assets: 'build',
+        strict: true
+      })
+    })
+  ],
   server: { port: 5174 },
   preview: { port: 4174 },
   test: {

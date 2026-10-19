@@ -3,7 +3,7 @@ export const prerender = true;
 export const trailingSlash = 'never';
 
 import { waitLocale } from 'svelte-i18n';
-import { setupI18n } from '$lib/i18n';
+import { setupI18n } from '#lib/i18n/index.js';
 
 // Initialize svelte-i18n before the first render and wait until the initial
 // locale's messages are loaded. During prerender this runs on the server, so

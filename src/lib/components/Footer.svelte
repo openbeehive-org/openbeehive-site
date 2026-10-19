@@ -1,6 +1,6 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
-  import { APP_URL, DOCS_URL, GITHUB_URL } from '$lib/config';
+  import { APP_URL, DOCS_URL, GITHUB_URL } from '#lib/config.js';
   // Prerendered with the build year; hydration updates it to the visitor's year.
   const year = new Date().getFullYear();
 </script>

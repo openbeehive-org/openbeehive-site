@@ -1,7 +1,7 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
-  import { APP_URL } from '$lib/config';
-  import Footer from '$lib/components/Footer.svelte';
+  import { APP_URL } from '#lib/config.js';
+  import Footer from '#lib/components/Footer.svelte';
   let { children } = $props();
 </script>
 

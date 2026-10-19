@@ -2,7 +2,7 @@
   // Branded 404 content, shared by the prerendered /404 page (served by Apache
   // via ErrorDocument) and the SvelteKit client-side error page.
   import { _ } from 'svelte-i18n';
-  import Footer from '$lib/components/Footer.svelte';
+  import Footer from '#lib/components/Footer.svelte';
 </script>
 
 <div class="wrap">

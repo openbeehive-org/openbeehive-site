@@ -1,9 +1,9 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n';
-  import { changeLanguage, SUPPORTED, LANG_LABELS } from '$lib/i18n';
-  import { APP_URL, DEMO_URL, DOCS_URL, GITHUB_URL, SITE_URL } from '$lib/config';
-  import Footer from '$lib/components/Footer.svelte';
-  import Seo from '$lib/components/Seo.svelte';
+  import { changeLanguage, SUPPORTED, LANG_LABELS } from '#lib/i18n/index.js';
+  import { APP_URL, DEMO_URL, DOCS_URL, GITHUB_URL, SITE_URL } from '#lib/config.js';
+  import Footer from '#lib/components/Footer.svelte';
+  import Seo from '#lib/components/Seo.svelte';
 
   // Structured data for search engines and AI crawlers (English-only is fine).
   const jsonLd = JSON.stringify([

@@ -2,7 +2,7 @@
   // Per-page head metadata: title, description, canonical URL, Open Graph and
   // Twitter cards. The site serves one URL per page (language switching is
   // client-side on the same URL), so there are no hreflang alternates.
-  import { SITE_URL } from '$lib/config';
+  import { SITE_URL } from '#lib/config.js';
 
   let {
     title,

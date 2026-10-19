@@ -1,6 +1,6 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
-  import Seo from '$lib/components/Seo.svelte';
+  import Seo from '#lib/components/Seo.svelte';
 </script>
 
 <Seo
