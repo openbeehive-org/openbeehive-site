@@ -27,16 +27,55 @@
 </footer>
 
 <style>
-  .site-footer { border-top: 1px solid var(--line); background: var(--cream2);
-    padding: 28px 22px 24px; }
-  .inner { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between;
-    align-items: center; gap: 20px; flex-wrap: wrap; }
-  .brand { display: flex; align-items: center; gap: 11px; }
-  .brand .mark { font-size: 1.6rem; color: var(--honey); }
-  .brand strong { font-family: 'Fraunces', serif; display: block; }
-  .brand small { color: var(--ink-soft); font-size: .8rem; }
-  .links { display: flex; gap: 20px; flex-wrap: wrap; }
-  .links a { color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: .9rem; }
-  .links a:hover { color: var(--honey-d); }
-  .legal { max-width: 1080px; margin: 18px auto 0; color: var(--ink-soft); font-size: .8rem; }
+  .site-footer {
+    border-top: 1px solid var(--line);
+    background: var(--cream2);
+    padding: 28px 22px 24px;
+  }
+  .inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .brand .mark {
+    font-size: 1.6rem;
+    color: var(--honey);
+  }
+  .brand strong {
+    font-family: 'Fraunces', serif;
+    display: block;
+  }
+  .brand small {
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+  }
+  .links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .links a:hover {
+    color: var(--honey-d);
+  }
+  .legal {
+    max-width: 1080px;
+    margin: 18px auto 0;
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+  }
 </style>

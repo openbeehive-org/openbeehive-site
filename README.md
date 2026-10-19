@@ -12,8 +12,9 @@ deployed separately from the application.
 ## Develop
 
 ```bash
-npm install
+npm ci
 npm run dev        # Vite dev server on http://localhost:5174
+npm run check      # lint, tests, audit, build, fleetlint (see CONTRIBUTING.md)
 ```
 
 ## Build & deploy
@@ -45,6 +46,10 @@ src/lib/config.ts                   APP_URL (link target for the app domain)
 Five languages (en, de, fr, es, it) live in `src/lib/i18n/locales/`. The files
 hold only the strings this site uses and are not shared with the app. Keys are
 English; `en.json` is the fallback.
+
+## Architecture
+
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## License
 

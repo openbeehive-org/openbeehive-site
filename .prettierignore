@@ -1,0 +1,8 @@
+# Prose is written by hand; Prettier formats code and config only
+*.md
+build/
+.svelte-kit/
+node_modules/
+coverage/
+package-lock.json
+static/
