@@ -3,18 +3,19 @@
   // via ErrorDocument) and the SvelteKit client-side error page.
   import { _ } from 'svelte-i18n';
   import Footer from '#lib/components/Footer.svelte';
+  import Icon, { HEX } from '#lib/components/Icon.svelte';
 </script>
 
 <div class="wrap">
   <header class="bar">
     <a class="brand" href="/">
-      <span class="mark">⬡</span>
+      <span class="mark"><Icon d={HEX} /></span>
       <strong>{$_('app.name')}</strong>
     </a>
   </header>
 
   <main class="body">
-    <div class="hex" aria-hidden="true">⬡</div>
+    <div class="hex" aria-hidden="true"><Icon d={HEX} /></div>
     <p class="code">404</p>
     <h1>{$_('pages.notfound_title')}</h1>
     <p class="text">{$_('pages.notfound_text')}</p>
@@ -44,6 +45,7 @@
     color: var(--ink);
   }
   .brand .mark {
+    display: inline-flex;
     font-size: 1.4rem;
     color: var(--honey);
   }

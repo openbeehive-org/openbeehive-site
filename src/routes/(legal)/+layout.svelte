@@ -2,13 +2,14 @@
   import { _ } from 'svelte-i18n';
   import { APP_URL } from '#lib/config.js';
   import Footer from '#lib/components/Footer.svelte';
+  import Icon, { HEX } from '#lib/components/Icon.svelte';
   let { children } = $props();
 </script>
 
 <div class="site">
   <header class="bar">
     <a class="brand" href="/">
-      <span class="mark">⬡</span>
+      <span class="mark"><Icon d={HEX} /></span>
       <strong>{$_('app.name')}</strong>
     </a>
     <a class="cta" href="{APP_URL}/login">{$_('landing.cta_start')}</a>
@@ -42,6 +43,7 @@
     color: var(--ink);
   }
   .brand .mark {
+    display: inline-flex;
     font-size: 1.4rem;
     color: var(--honey);
   }

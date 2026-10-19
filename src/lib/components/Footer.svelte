@@ -1,6 +1,7 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
   import { APP_URL, DOCS_URL, GITHUB_URL } from '#lib/config.js';
+  import Icon, { HEX } from '#lib/components/Icon.svelte';
   // Prerendered with the build year; hydration updates it to the visitor's year.
   const year = new Date().getFullYear();
 </script>
@@ -8,7 +9,7 @@
 <footer class="site-footer">
   <div class="inner">
     <div class="brand">
-      <span class="mark">⬡</span>
+      <span class="mark"><Icon d={HEX} /></span>
       <div>
         <strong>{$_('app.name')}</strong>
         <small>{$_('footer.tagline')}</small>
@@ -47,6 +48,7 @@
     gap: 11px;
   }
   .brand .mark {
+    display: inline-flex;
     font-size: 1.6rem;
     color: var(--honey);
   }
