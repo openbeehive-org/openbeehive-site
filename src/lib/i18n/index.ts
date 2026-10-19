@@ -27,7 +27,7 @@ register('it', () => import('./locales/it.json'));
 let initialized = false;
 
 // Called from the root +layout.ts load so the locale is registered and loaded
-// before the first render — this is what makes SSR/prerender emit real content
+// before the first render; this is what makes SSR/prerender emit real content
 // instead of an empty shell (combined with `waitLocale()` in the load).
 export function setupI18n() {
   if (initialized) return;

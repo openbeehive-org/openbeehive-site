@@ -19,7 +19,7 @@
       license: 'https://www.gnu.org/licenses/agpl-3.0.html',
       sameAs: [GITHUB_URL],
       description:
-        'Offline-first, open-source beekeeping records: apiaries, hives, queens, inspections, treatments and harvests — hosted or self-hosted.'
+        'Offline-first, open-source beekeeping records: apiaries, hives, queens, inspections, treatments and harvests, hosted or self-hosted.'
     },
     {
       '@context': 'https://schema.org',
@@ -55,8 +55,8 @@
 </script>
 
 <Seo
-  title="Openbeehive — free, open-source beekeeping records"
-  description="Free, open-source beekeeping records. Offline-first hive management: inspections, queens, treatments and harvests — for hobby and professional beekeepers."
+  title="Openbeehive: free, open-source beekeeping records"
+  description="Free, open-source beekeeping records. Offline-first hive management: inspections, queens, treatments and harvests, for hobby and professional beekeepers."
   path="/"
 />
 

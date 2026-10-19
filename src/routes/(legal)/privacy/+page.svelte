@@ -5,7 +5,7 @@
 
 <Seo
   title="Privacy policy · Openbeehive"
-  description="Privacy policy for openbeehive.org — a static site with no cookies, no analytics and no third-party resources. GDPR information for the Openbeehive project."
+  description="Privacy policy for openbeehive.org, a static site with no cookies, no analytics and no third-party resources. GDPR information for the Openbeehive project."
   path="/privacy"
 />
 
@@ -29,7 +29,7 @@
 
 <h2>Hosting</h2>
 <p>
-  The site is hosted by ALL-INKL.COM – Neue Medien Münnich, Germany. When you visit, the web server
+  The site is hosted by ALL-INKL.COM - Neue Medien Münnich, Germany. When you visit, the web server
   processes technical connection data (such as your IP address, the requested page, and the time of
   the request) in server logs. This processing is necessary to deliver the site and to ensure its
   stability and security, based on our legitimate interest under Art. 6(1)(f) GDPR.

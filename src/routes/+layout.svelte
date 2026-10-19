@@ -5,7 +5,7 @@
 {@render children()}
 
 <style>
-  /* Self-hosted fonts (static/fonts) — no requests leave this domain. */
+  /* Self-hosted fonts (static/fonts): no requests leave this domain. */
   @font-face {
     font-family: 'Fraunces';
     font-style: normal;
