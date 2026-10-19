@@ -3,8 +3,8 @@
 Thanks for helping improve [openbeehive.org](https://openbeehive.org)! This
 repository is the **marketing/landing site** (a static SvelteKit app). The
 application and documentation live in
-[`openbeehive-app`](https://github.com/johnnycube/openbeehive-app) and
-[`openbeehive-docs`](https://github.com/johnnycube/openbeehive-docs).
+[`openbeehive-app`](https://github.com/openbeehive-org/openbeehive-app) and
+[`openbeehive-docs`](https://github.com/openbeehive-org/openbeehive-docs).
 
 ## Development setup
 

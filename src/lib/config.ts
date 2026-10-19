@@ -9,4 +9,4 @@ export const DEMO_URL = 'https://demo.openbeehive.org';
 export const DOCS_URL = 'https://docs.openbeehive.org';
 
 // Source code on GitHub.
-export const GITHUB_URL = 'https://github.com/johnnycube/openbeehive-app';
+export const GITHUB_URL = 'https://github.com/openbeehive-org/openbeehive-app';

@@ -39,7 +39,7 @@ First public release. 🐝
 - Multi-language: English, German, French, Spanish, Italian.
 - Fully static build via `@sveltejs/adapter-static` — deployable to any CDN.
 
-[Unreleased]: https://github.com/johnnycube/openbeehive-site/compare/v0.1.1...HEAD
-[0.1.2]: https://github.com/johnnycube/openbeehive-site/releases/tag/v0.1.2
-[0.1.1]: https://github.com/johnnycube/openbeehive-site/releases/tag/v0.1.1
-[0.1.0]: https://github.com/johnnycube/openbeehive-site/releases/tag/v0.1.0
+[Unreleased]: https://github.com/openbeehive-org/openbeehive-site/compare/v0.1.1...HEAD
+[0.1.2]: https://github.com/openbeehive-org/openbeehive-site/releases/tag/v0.1.2
+[0.1.1]: https://github.com/openbeehive-org/openbeehive-site/releases/tag/v0.1.1
+[0.1.0]: https://github.com/openbeehive-org/openbeehive-site/releases/tag/v0.1.0

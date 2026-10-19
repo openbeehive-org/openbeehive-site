@@ -13,6 +13,6 @@ policy in the `openbeehive-app` repository.
 ## How to report
 
 Please do not open a public issue. Use GitHub's
-[private vulnerability reporting](https://github.com/johnnycube/openbeehive-app/security/advisories/new)
+[private vulnerability reporting](https://github.com/openbeehive-org/openbeehive-app/security/advisories/new)
 or email **security@openbeehive.org**. Include a description and, if you can,
 steps to reproduce.
