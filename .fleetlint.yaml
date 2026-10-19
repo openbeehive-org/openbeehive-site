@@ -1,0 +1,49 @@
+# .fleetlint.yaml: https://github.com/fleetlint/fleetlint
+version: 1
+extends:
+  - fleetlint:recommended
+facts:
+  visibility: public # as the forge reported it at init; update it if the repository changes hands
+# discovered: stacks=[node] forge=github visibility=public tier=1 (default) layout=single release=yes taskrunner=npm-scripts container=none
+# Facts are re-detected on every run; pin one under `facts:` only when detection is wrong.
+
+# A "release" here is a v* tag that deploys the static site; no artifacts are published
+overrides:
+  release/signing:
+    enabled: false
+    reason: Tags deploy the static site to our own host; no release artifacts are published to sign.
+  release/checksums:
+    enabled: false
+    reason: No release artifacts to checksum; the site is rsynced to our own host.
+  release/provenance:
+    enabled: false
+    reason: No release artifacts to attest.
+  release/sbom:
+    enabled: false
+    reason: No release artifacts; npm audit and the license allowlist cover the build dependencies.
+  release/reproducible-build:
+    enabled: false
+    reason: The site build is not distributed; nobody rebuilds it to compare.
+  release/changelog-in-release:
+    enabled: false
+    reason: No forge release objects; CHANGELOG.md is hand-written per site revision.
+  changelog/generator-configured:
+    enabled: false
+    reason: CHANGELOG.md describes site content per revision (Keep a Changelog), not commits.
+  quality/mutation-gate:
+    enabled: false
+    reason: The only program code is the i18n bootstrap and a URL table; the unit tests cover every branch.
+  quality/duplication-gate:
+    enabled: false
+    reason: Code is a handful of Svelte pages and two small modules; repeated page chrome is markup, not logic.
+  ci/sast:
+    enabled: false
+    reason: Prerendered pages with no user input or backend; ESLint and svelte-check cover the small amount of code.
+  docs/adr-directory:
+    enabled: false
+    reason: A marketing site with three decisions, recorded in docs/ARCHITECTURE.md.
+
+exceptions:
+  - rule: ci/actions-pinned
+    match: 're:johnny/build/'
+    reason: Own reusable deploy workflow on the Gitea instance, outside Renovate's reach; tag v11 is controlled by us.

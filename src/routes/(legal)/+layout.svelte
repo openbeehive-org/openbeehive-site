@@ -22,19 +22,73 @@
 </div>
 
 <style>
-  .site { min-height: 100vh; display: flex; flex-direction: column; }
-  .bar { display: flex; justify-content: space-between; align-items: center;
-    padding: 16px 22px; border-bottom: 1px solid var(--line); }
-  .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; color: var(--ink); }
-  .brand .mark { font-size: 1.4rem; color: var(--honey); }
-  .brand strong { font-family: 'Fraunces', serif; }
-  .cta { background: var(--honey); color: #fff; text-decoration: none; font-weight: 700;
-    padding: 9px 16px; border-radius: 11px; font-size: .9rem; }
-  .content { flex: 1; max-width: 760px; margin: 0 auto; width: 100%; padding: 40px 22px 60px; }
-  .content :global(h1) { font-family: 'Fraunces', serif; font-size: 2rem; margin-bottom: 14px; }
-  .content :global(h2) { font-family: 'Fraunces', serif; font-size: 1.3rem; margin: 26px 0 8px; }
-  .content :global(p) { color: var(--ink); line-height: 1.65; margin-bottom: 12px; }
-  .content :global(a) { color: var(--honey-d); }
-  .content :global(ul) { margin: 0 0 12px 20px; line-height: 1.7; }
-  .content :global(.lead) { color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 20px; }
+  .site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand .mark {
+    font-size: 1.4rem;
+    color: var(--honey);
+  }
+  .brand strong {
+    font-family: 'Fraunces', serif;
+  }
+  .cta {
+    background: var(--honey);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 11px;
+    font-size: 0.9rem;
+  }
+  .content {
+    flex: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px 22px 60px;
+  }
+  .content :global(h1) {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+  .content :global(h2) {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    margin: 26px 0 8px;
+  }
+  .content :global(p) {
+    color: var(--ink);
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+  .content :global(a) {
+    color: var(--honey-d);
+  }
+  .content :global(ul) {
+    margin: 0 0 12px 20px;
+    line-height: 1.7;
+  }
+  .content :global(.lead) {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
 </style>

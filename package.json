@@ -8,18 +8,37 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "prepare": "svelte-kit sync || echo ''",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "tools": "go install github.com/fleetlint/fleetlint/cmd/fleetlint@v0.5.1 && go install github.com/zricethezav/gitleaks/v8@v8.30.1",
+    "fmt": "prettier --write . && eslint --fix .",
+    "lint": "svelte-kit sync && prettier --check . && eslint --max-warnings=0 . && svelte-check --tsconfig ./tsconfig.json",
+    "test": "vitest run",
+    "cover": "vitest run --coverage",
+    "audit": "audit-ci --config audit-ci.jsonc && license-checker-rseidelsohn --production --excludePrivatePackages --summary --onlyAllow \"MIT;MIT-0;ISC;Apache-2.0;BSD-2-Clause;BSD-3-Clause;0BSD;CC0-1.0;BlueOak-1.0.0;MPL-2.0;Python-2.0;CC-BY-4.0\" && knip --dependencies && gitleaks git --no-banner --redact .",
+    "check-fast": "npm run lint",
+    "check": "npm run lint && npm run cover && npm run audit && npm run build && fleetlint check --fail-on error"
   },
   "devDependencies": {
+    "@eslint/js": "10.0.1",
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.69.2",
     "@sveltejs/vite-plugin-svelte": "^7.2.0",
     "@types/node": "^24.13.3",
+    "@vitest/coverage-v8": "5.0.5",
+    "audit-ci": "7.1.0",
+    "eslint": "10.13.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-svelte": "3.23.1",
+    "globals": "17.13.0",
+    "knip": "6.42.0",
+    "license-checker-rseidelsohn": "5.0.1",
+    "prettier": "3.9.10",
+    "prettier-plugin-svelte": "4.1.1",
     "svelte": "^5.56.4",
     "svelte-check": "^4.7.2",
     "typescript": "^6.0.3",
-    "vite": "^8.1.4"
+    "typescript-eslint": "8.71.2",
+    "vite": "^8.1.4",
+    "vitest": "5.0.5"
   },
   "dependencies": {
     "svelte-i18n": "^4.0.0"

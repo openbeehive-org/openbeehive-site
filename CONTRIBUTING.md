@@ -8,14 +8,20 @@ application and documentation live in
 
 ## Development setup
 
-You'll need **Node 24+**.
+You'll need the Node version in `.nvmrc`, Go (for the pinned `gitleaks` and
+`fleetlint` tools) and [prek](https://prek.j178.dev/) for the git hooks.
 
 ```bash
-npm install
+npm ci
+npm run tools      # gitleaks + fleetlint into $(go env GOPATH)/bin
+prek install       # git hooks: hygiene, secrets, commit messages, fleetlint; full check on push
 npm run dev        # http://localhost:5174
-npm run build      # static output in ./build
-npm run preview    # serve the production build on :4174
+npm run check      # lint, tests with coverage, audit, build, fleetlint — the definition of green
+npm run fmt        # prettier + eslint --fix
 ```
+
+Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/)
+(`feat:`, `fix:`, `docs:`, `chore:` …); the commit-msg hook enforces it.
 
 The site is fully prerendered with `@sveltejs/adapter-static` — the `build/`
 output is plain static files for any CDN or static host.
@@ -34,8 +40,12 @@ output is plain static files for any CDN or static host.
 ## Pull requests
 
 1. Fork and branch from `main`.
-2. Make sure it builds (`npm run build`).
+2. Make sure `npm run check` passes.
 3. Reference any related issue (`Closes #123`).
+
+## Code of conduct
+
+This project follows the [Contributor Covenant](CODE_OF_CONDUCT.md).
 
 ## License
 
