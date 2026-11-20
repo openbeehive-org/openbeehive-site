@@ -2,6 +2,7 @@
   import { _ } from 'svelte-i18n';
   import { APP_URL, DOCS_URL, GITHUB_URL } from '#lib/config.js';
   import Icon, { HEX } from '#lib/components/Icon.svelte';
+  import ThemeSwitch from '#lib/components/ThemeSwitch.svelte';
   // Prerendered with the build year; hydration updates it to the visitor's year.
   const year = new Date().getFullYear();
 </script>
@@ -24,13 +25,16 @@
       <a href="{APP_URL}/login">{$_('nav.dashboard')}</a>
     </nav>
   </div>
-  <div class="legal">© {year} {$_('app.name')} · {$_('footer.license')}</div>
+  <div class="legal">
+    <span>© {year} {$_('app.name')} · {$_('footer.license')}</span>
+    <ThemeSwitch />
+  </div>
 </footer>
 
 <style>
   .site-footer {
-    border-top: 1px solid var(--line);
-    background: var(--cream2);
+    border-top: 1px solid var(--border);
+    background: var(--surface);
     padding: 28px 22px 24px;
   }
   .inner {
@@ -50,14 +54,14 @@
   .brand .mark {
     display: inline-flex;
     font-size: 1.6rem;
-    color: var(--honey);
+    color: var(--brand);
   }
   .brand strong {
     font-family: 'Fraunces', serif;
     display: block;
   }
   .brand small {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     font-size: 0.8rem;
   }
   .links {
@@ -66,18 +70,23 @@
     flex-wrap: wrap;
   }
   .links a {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
   }
   .links a:hover {
-    color: var(--honey-d);
+    color: var(--accent-text);
   }
   .legal {
     max-width: 1080px;
     margin: 18px auto 0;
-    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    color: var(--text-soft);
     font-size: 0.8rem;
   }
 </style>

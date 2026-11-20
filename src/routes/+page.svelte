@@ -212,8 +212,9 @@
     position: sticky;
     top: 0;
     backdrop-filter: blur(8px);
-    background: rgba(251, 246, 234, 0.82);
-    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    border-bottom: 1px solid var(--border);
     z-index: 10;
     flex-wrap: wrap;
   }
@@ -222,7 +223,7 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: var(--ink);
+    color: var(--text);
   }
   .mark {
     width: 38px;
@@ -230,7 +231,7 @@
     display: grid;
     place-items: center;
     border-radius: 11px;
-    color: #fff;
+    color: var(--cream2);
     background: linear-gradient(150deg, var(--honey-l), var(--honey-d));
     font-size: 20px;
   }
@@ -241,7 +242,7 @@
     line-height: 1;
   }
   .brand small {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     font-size: 0.7rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -253,13 +254,13 @@
     flex-wrap: wrap;
   }
   .navlink {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.92rem;
   }
   .navlink:hover {
-    color: var(--honey-d);
+    color: var(--accent-text);
   }
   .lang {
     display: flex;
@@ -267,22 +268,22 @@
   }
   .lang button {
     background: none;
-    border: 1px solid var(--line);
+    border: 1px solid var(--border-strong);
     border-radius: 7px;
     padding: 4px 6px;
     cursor: pointer;
     font-weight: 700;
     font-size: 0.72rem;
-    color: var(--ink-soft);
+    color: var(--text-soft);
   }
   .lang button.on {
-    background: var(--honey);
-    color: #fff;
-    border-color: var(--honey);
+    background: var(--accent);
+    color: var(--on-accent);
+    border-color: var(--accent);
   }
   .btn-login {
-    background: var(--ink);
-    color: var(--cream2) !important;
+    background: var(--text);
+    color: var(--bg);
     padding: 9px 16px;
     border-radius: 10px;
     text-decoration: none;
@@ -300,9 +301,9 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: var(--cream2);
-    border: 1px solid var(--line);
-    color: var(--ink-soft);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-soft);
     font-weight: 700;
     font-size: 0.8rem;
     padding: 6px 14px;
@@ -320,7 +321,7 @@
     line-height: 1.05;
   }
   .hero p {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     font-size: 1.15rem;
     max-width: 52ch;
     margin: 18px auto 0;
@@ -340,25 +341,31 @@
     text-decoration: none;
   }
   .btn.primary {
-    background: var(--honey);
-    color: #fff;
-    box-shadow: 0 6px 18px rgba(199, 127, 34, 0.32);
+    background: var(--accent);
+    color: var(--on-accent);
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--brand) 32%, transparent);
   }
   .btn.ghost {
-    border: 1px solid var(--line);
-    color: var(--ink);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
   }
   .btn.ghost.light {
-    border-color: rgba(255, 253, 247, 0.4);
-    color: var(--cream2);
+    color: var(--on-band);
     white-space: nowrap;
   }
+  .btn.ghost.light:focus-visible {
+    outline-color: var(--on-band);
+  }
+  /* Honeycomb outline behind the hero: the SVG is the mask, the colour comes from the theme. */
   .hex-field {
+    --hex: url("data:image/svg+xml,%3Csvg width='56' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 0L56 16.7v33.3L28 66.6 0 50V16.7z' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E");
     position: absolute;
     inset: 0;
-    opacity: 0.5;
+    opacity: 0.06;
     pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='56' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 0L56 16.7v33.3L28 66.6 0 50V16.7z' fill='none' stroke='%23c79a4a' stroke-opacity='0.10' stroke-width='1.5'/%3E%3C/svg%3E");
+    background: var(--brand);
+    -webkit-mask-image: var(--hex);
+    mask-image: var(--hex);
   }
 
   /* Showcase */
@@ -375,7 +382,7 @@
     font-size: clamp(1.6rem, 3vw, 2.2rem);
   }
   .showcase-copy p {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     line-height: 1.6;
     margin: 12px 0 18px;
     max-width: 46ch;
@@ -386,11 +393,11 @@
   }
   .phone-screen {
     width: 248px;
-    background: var(--cream2);
-    border: 1px solid var(--line);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 28px;
     padding: 16px 14px;
-    box-shadow: 0 24px 60px rgba(44, 35, 22, 0.16);
+    box-shadow: 0 24px 60px var(--shadow);
   }
   .m-head {
     display: flex;
@@ -402,7 +409,7 @@
   }
   .m-mark {
     display: inline-flex;
-    color: var(--honey);
+    color: var(--brand);
     font-size: 1.2rem;
   }
   .m-stats {
@@ -412,8 +419,8 @@
     margin-bottom: 12px;
   }
   .m-stat {
-    background: var(--cream);
-    border: 1px solid var(--line);
+    background: var(--bg);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 10px 6px;
     text-align: center;
@@ -422,15 +429,15 @@
     display: block;
     font-family: 'Fraunces', serif;
     font-size: 1.3rem;
-    color: var(--honey-d);
+    color: var(--accent-text);
   }
   .m-stat small {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     font-size: 0.66rem;
   }
   .m-card {
-    background: var(--cream);
-    border: 1px solid var(--line);
+    background: var(--bg);
+    border: 1px solid var(--border);
     border-radius: 14px;
     padding: 6px 4px;
   }
@@ -440,8 +447,8 @@
     gap: 8px;
     padding: 9px 8px;
     font-size: 0.78rem;
-    color: var(--ink);
-    border-bottom: 1px solid var(--line);
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
   }
   .m-row:last-child {
     border-bottom: none;
@@ -453,16 +460,16 @@
     flex-shrink: 0;
   }
   .dot.moss {
-    background: var(--moss);
+    background: var(--ok);
   }
   .dot.honey {
-    background: var(--honey);
+    background: var(--brand);
   }
   .m-tabbar {
     display: flex;
     justify-content: space-between;
     padding: 14px 16px 4px;
-    color: var(--ink-soft);
+    color: var(--text-soft);
     opacity: 0.6;
   }
   .m-tabbar span {
@@ -470,7 +477,7 @@
     font-size: 1.1rem;
   }
   .m-tabbar .on {
-    color: var(--honey);
+    color: var(--brand);
     opacity: 1;
   }
 
@@ -483,8 +490,8 @@
     padding: 30px 6vw 50px;
   }
   .card {
-    background: var(--cream2);
-    border: 1px solid var(--line);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 18px;
     padding: 26px;
     animation: rise 0.5s ease both;
@@ -492,7 +499,7 @@
   }
   .card .num {
     font-family: 'Fraunces', serif;
-    color: var(--honey);
+    color: var(--accent-text);
     font-size: 1.1rem;
     font-weight: 700;
   }
@@ -501,7 +508,7 @@
     margin: 8px 0 8px;
   }
   .card p {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     line-height: 1.55;
   }
   @keyframes rise {
@@ -525,7 +532,7 @@
     font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   }
   .why .lead {
-    color: var(--honey-d);
+    color: var(--accent-text);
     font-size: 1.2rem;
     font-weight: 600;
     margin: 12px auto 26px;
@@ -538,13 +545,13 @@
     text-align: left;
   }
   .why-cols p {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     line-height: 1.7;
   }
 
   .opensource {
-    background: var(--ink);
-    color: var(--cream2);
+    background: var(--band-bg);
+    color: var(--on-band);
     margin: 30px 0;
   }
   .os-inner {
@@ -559,10 +566,10 @@
   }
   .os-inner h2 {
     font-size: 1.7rem;
-    color: var(--cream2);
+    color: var(--on-band);
   }
   .os-inner p {
-    color: rgba(255, 253, 247, 0.72);
+    color: var(--on-band-soft);
     line-height: 1.6;
     margin-top: 8px;
     max-width: 52ch;
@@ -578,14 +585,14 @@
     font-size: clamp(1.6rem, 3vw, 2.2rem);
   }
   .selfhost p {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     max-width: 54ch;
     margin: 12px auto 18px;
     line-height: 1.6;
   }
   .selfhost code {
-    background: var(--ink);
-    color: var(--cream2);
+    background: var(--band-bg);
+    color: var(--on-band);
     padding: 10px 16px;
     border-radius: 10px;
     font-size: 0.85rem;
@@ -595,7 +602,7 @@
     margin-top: 16px;
   }
   .docs-link a {
-    color: var(--honey-d);
+    color: var(--accent-text);
     font-weight: 700;
     text-decoration: none;
   }
@@ -603,24 +610,24 @@
   .cta-final {
     text-align: center;
     padding: 50px 6vw 70px;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--border);
   }
   .cta-final h2 {
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   }
   .cta-final > p {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     max-width: 48ch;
     margin: 14px auto 26px;
     line-height: 1.6;
   }
   .cta-final .disclaimer {
     font-size: 0.82rem;
-    color: var(--ink-soft);
+    color: var(--text-soft);
     max-width: 58ch;
     margin: 28px auto 0;
-    background: var(--cream2);
-    border: 1px solid var(--line);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 12px 16px;
   }

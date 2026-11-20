@@ -35,19 +35,19 @@
     display: flex;
     align-items: center;
     padding: 16px 22px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
   }
   .brand {
     display: flex;
     align-items: center;
     gap: 9px;
     text-decoration: none;
-    color: var(--ink);
+    color: var(--text);
   }
   .brand .mark {
     display: inline-flex;
     font-size: 1.4rem;
-    color: var(--honey);
+    color: var(--brand);
   }
   .brand strong {
     font-family: 'Fraunces', serif;
@@ -63,7 +63,7 @@
   }
   .hex {
     font-size: 3.4rem;
-    color: var(--honey);
+    color: var(--brand);
     opacity: 0.35;
     line-height: 1;
   }
@@ -71,7 +71,7 @@
     font-family: 'Fraunces', serif;
     font-weight: 700;
     font-size: 1.1rem;
-    color: var(--honey-d);
+    color: var(--accent-text);
     letter-spacing: 0.2em;
     margin-top: 10px;
   }
@@ -81,19 +81,19 @@
     margin: 8px 0 12px;
   }
   .text {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     max-width: 44ch;
     line-height: 1.6;
   }
   .home {
     display: inline-block;
     margin-top: 26px;
-    background: var(--honey);
-    color: #fff;
+    background: var(--accent);
+    color: var(--on-accent);
     text-decoration: none;
     font-weight: 700;
     padding: 12px 22px;
     border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(199, 127, 34, 0.32);
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--brand) 32%, transparent);
   }
 </style>

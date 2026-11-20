@@ -21,6 +21,12 @@
     "license": "AGPL-3.0",
     "tagline": "Offline-first Imker-Buchführung."
   },
+  "theme": {
+    "label": "Darstellung",
+    "system": "System",
+    "light": "Hell",
+    "dark": "Dunkel"
+  },
   "pages": {
     "about_title": "Über Openbeehive",
     "imprint_title": "Impressum",

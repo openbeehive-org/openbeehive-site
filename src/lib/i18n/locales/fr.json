@@ -21,6 +21,12 @@
     "license": "AGPL-3.0",
     "tagline": "Carnet d'apiculture, même hors ligne."
   },
+  "theme": {
+    "label": "Thème",
+    "system": "Système",
+    "light": "Clair",
+    "dark": "Sombre"
+  },
   "pages": {
     "about_title": "À propos d'Openbeehive",
     "imprint_title": "Mentions légales",

@@ -33,26 +33,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 22px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--border);
   }
   .brand {
     display: flex;
     align-items: center;
     gap: 9px;
     text-decoration: none;
-    color: var(--ink);
+    color: var(--text);
   }
   .brand .mark {
     display: inline-flex;
     font-size: 1.4rem;
-    color: var(--honey);
+    color: var(--brand);
   }
   .brand strong {
     font-family: 'Fraunces', serif;
   }
   .cta {
-    background: var(--honey);
-    color: #fff;
+    background: var(--accent);
+    color: var(--on-accent);
     text-decoration: none;
     font-weight: 700;
     padding: 9px 16px;
@@ -77,19 +77,19 @@
     margin: 26px 0 8px;
   }
   .content :global(p) {
-    color: var(--ink);
+    color: var(--text);
     line-height: 1.65;
     margin-bottom: 12px;
   }
   .content :global(a) {
-    color: var(--honey-d);
+    color: var(--accent-text);
   }
   .content :global(ul) {
     margin: 0 0 12px 20px;
     line-height: 1.7;
   }
   .content :global(.lead) {
-    color: var(--ink-soft);
+    color: var(--text-soft);
     font-size: 1.05rem;
     margin-bottom: 20px;
   }

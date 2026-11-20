@@ -21,6 +21,12 @@
     "license": "AGPL-3.0",
     "tagline": "Cuaderno de apicultura, incluso sin conexión."
   },
+  "theme": {
+    "label": "Tema",
+    "system": "Sistema",
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
   "pages": {
     "about_title": "Acerca de Openbeehive",
     "imprint_title": "Aviso legal",

@@ -21,6 +21,12 @@
     "license": "AGPL-3.0",
     "tagline": "Offline-first beekeeping records."
   },
+  "theme": {
+    "label": "Theme",
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
   "pages": {
     "about_title": "About Openbeehive",
     "imprint_title": "Imprint",
