@@ -23,7 +23,7 @@
 <h2>What it does</h2>
 <ul>
   <li>
-    Per-hive stock cards (Stockkarte) with colony strength, brood, stores, varroa, behaviour and the
+    Complete records for every hive: colony strength, brood, stores, varroa, behaviour and the
     activities done on each visit.
   </li>
   <li>Queen management with the international marking colour scheme and full reign history.</li>
