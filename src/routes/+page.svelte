@@ -195,7 +195,7 @@
   <section id="selfhost" class="selfhost">
     <h2>{$_('landing.selfhost_title')}</h2>
     <p>{$_('landing.selfhost_text')}</p>
-    <code>docker compose up -d &nbsp;·&nbsp; DEPLOYMENT_PROFILE=selfhost</code>
+    <code>docker compose -f docker-compose.selfhost.yml up -d</code>
     <p class="docs-link"><a href={DOCS_URL}>{$_('nav.docs')} <Icon d={ARROW_OUT} /></a></p>
   </section>
 
