@@ -1,6 +1,6 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n';
-  import { changeLanguage, SUPPORTED, LANG_LABELS } from '#lib/i18n/index.js';
+  import { changeLanguage, SUPPORTED, LANG_LABELS, type Lang } from '#lib/i18n/index.js';
   import {
     APP_LOGIN_URL,
     APP_URL,
@@ -10,6 +10,7 @@
     SITE_URL
   } from '#lib/config.js';
   import Footer from '#lib/components/Footer.svelte';
+  import ThemeSwitch from '#lib/components/ThemeSwitch.svelte';
   import Seo from '#lib/components/Seo.svelte';
   import Icon, { ARROW_OUT, HEX } from '#lib/components/Icon.svelte';
 
@@ -51,6 +52,8 @@
     { t: 'landing.feature_api_title', d: 'landing.feature_api_text' }
   ];
 
+  const currentLang = $derived(SUPPORTED.find((l) => $locale?.startsWith(l)) ?? 'en');
+
   // Phone mock-up tab bar: home, list, grid, menu, more.
   const TAB_ICONS = [
     HEX,
@@ -87,18 +90,21 @@
     <a class="navlink" href="#selfhost">{$_('nav.selfhost')}</a>
     <a class="navlink" href={DOCS_URL}>{$_('nav.docs')}</a>
     <a class="navlink" href={GITHUB_URL} rel="noopener" target="_blank">{$_('nav.github')}</a>
-    <div class="lang" role="group" aria-label="Language">
-      {#each SUPPORTED as l (l)}
-        <button
-          class:on={$locale?.startsWith(l)}
-          onclick={() => changeLanguage(l)}
-          title={LANG_LABELS[l]}
-          aria-label={LANG_LABELS[l]}>{l.toUpperCase()}</button
-        >
-      {/each}
-    </div>
-    <a class="btn-login" href={APP_LOGIN_URL}>{$_('nav.login')}</a>
   </nav>
+  <div class="tools">
+    <select
+      class="lang"
+      aria-label="Language"
+      value={currentLang}
+      onchange={(e) => changeLanguage(e.currentTarget.value as Lang)}
+    >
+      {#each SUPPORTED as l (l)}
+        <option value={l} lang={l}>{LANG_LABELS[l]}</option>
+      {/each}
+    </select>
+    <ThemeSwitch />
+    <a class="btn-login" href={APP_LOGIN_URL}>{$_('nav.login')}</a>
+  </div>
 </header>
 
 <main>
@@ -237,6 +243,7 @@
   .brand {
     display: flex;
     align-items: center;
+    min-height: 44px;
     gap: 10px;
     text-decoration: none;
     color: var(--text);
@@ -266,10 +273,14 @@
   nav {
     display: flex;
     align-items: center;
-    gap: 16px;
     flex-wrap: wrap;
   }
+  /* Header controls are at least 44 px tall so they are easy to hit on a phone. */
   .navlink {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 6px;
     color: var(--text-soft);
     text-decoration: none;
     font-weight: 600;
@@ -278,29 +289,31 @@
   .navlink:hover {
     color: var(--accent-text);
   }
-  .lang {
+  .tools {
     display: flex;
-    gap: 3px;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
-  .lang button {
-    background: none;
+  .lang {
+    min-height: 44px;
+    padding: 0 10px;
     border: 1px solid var(--border-strong);
-    border-radius: 7px;
-    padding: 4px 6px;
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.85rem;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 0.72rem;
-    color: var(--text-soft);
-  }
-  .lang button.on {
-    background: var(--accent);
-    color: var(--on-accent);
-    border-color: var(--accent);
   }
   .btn-login {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     background: var(--text);
     color: var(--bg);
-    padding: 9px 16px;
+    padding: 0 16px;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 700;
@@ -661,6 +674,11 @@
   }
 
   @media (max-width: 760px) {
+    /* The header wraps to several rows on a phone; let it scroll away
+       instead of covering a third of the screen. */
+    .bar {
+      position: static;
+    }
     .showcase {
       grid-template-columns: 1fr;
     }

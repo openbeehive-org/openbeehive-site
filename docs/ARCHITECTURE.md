@@ -19,8 +19,8 @@ app prerendered to static HTML; nothing runs server-side.
 - **`src/lib/theme.ts`** — the colour theme: system, light or dark, kept per
   device. An inline script in `src/app.html` applies the same rule before the
   first paint; `theme.test.ts` runs that script against the module.
-- **`src/lib/components/`** — footer with the theme switch, SEO head tags,
-  not-found content.
+- **`src/lib/components/`** — footer, the theme switch shown in every page
+  header, SEO head tags, not-found content.
 - **`static/`** — favicon and other files copied verbatim.
 
 ## Build and deploy

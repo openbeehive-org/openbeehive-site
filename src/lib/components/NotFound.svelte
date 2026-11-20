@@ -4,6 +4,7 @@
   import { _ } from 'svelte-i18n';
   import Footer from '#lib/components/Footer.svelte';
   import Icon, { HEX } from '#lib/components/Icon.svelte';
+  import ThemeSwitch from '#lib/components/ThemeSwitch.svelte';
 </script>
 
 <div class="wrap">
@@ -12,6 +13,7 @@
       <span class="mark"><Icon d={HEX} /></span>
       <strong>{$_('app.name')}</strong>
     </a>
+    <ThemeSwitch />
   </header>
 
   <main class="body">
@@ -34,6 +36,8 @@
   .bar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 12px;
     padding: 16px 22px;
     border-bottom: 1px solid var(--border);
   }

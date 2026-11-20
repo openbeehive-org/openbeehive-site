@@ -2,7 +2,6 @@
   import { _ } from 'svelte-i18n';
   import { APP_URL, DOCS_URL, GITHUB_URL } from '#lib/config.js';
   import Icon, { HEX } from '#lib/components/Icon.svelte';
-  import ThemeSwitch from '#lib/components/ThemeSwitch.svelte';
   // Prerendered with the build year; hydration updates it to the visitor's year.
   const year = new Date().getFullYear();
 </script>
@@ -27,7 +26,6 @@
   </div>
   <div class="legal">
     <span>© {year} {$_('app.name')} · {$_('footer.license')}</span>
-    <ThemeSwitch />
   </div>
 </footer>
 
@@ -66,10 +64,13 @@
   }
   .links {
     display: flex;
-    gap: 20px;
+    gap: 0 12px;
     flex-wrap: wrap;
   }
   .links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     color: var(--text-soft);
     text-decoration: none;
     font-weight: 600;

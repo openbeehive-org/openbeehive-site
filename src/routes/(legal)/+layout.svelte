@@ -3,6 +3,7 @@
   import { APP_LOGIN_URL } from '#lib/config.js';
   import Footer from '#lib/components/Footer.svelte';
   import Icon, { HEX } from '#lib/components/Icon.svelte';
+  import ThemeSwitch from '#lib/components/ThemeSwitch.svelte';
   let { children } = $props();
 </script>
 
@@ -12,7 +13,10 @@
       <span class="mark"><Icon d={HEX} /></span>
       <strong>{$_('app.name')}</strong>
     </a>
-    <a class="cta" href={APP_LOGIN_URL}>{$_('landing.cta_demo')}</a>
+    <div class="tools">
+      <ThemeSwitch />
+      <a class="cta" href={APP_LOGIN_URL}>{$_('landing.cta_demo')}</a>
+    </div>
   </header>
 
   <main class="content">
@@ -32,6 +36,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
     padding: 16px 22px;
     border-bottom: 1px solid var(--border);
   }
@@ -50,12 +56,20 @@
   .brand strong {
     font-family: 'Fraunces', serif;
   }
+  .tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
   .cta {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     background: var(--accent);
     color: var(--on-accent);
     text-decoration: none;
     font-weight: 700;
-    padding: 9px 16px;
+    padding: 0 16px;
     border-radius: 11px;
     font-size: 0.9rem;
   }
