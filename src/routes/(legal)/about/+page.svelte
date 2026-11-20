@@ -1,5 +1,6 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
+  import { CONTACT_EMAIL } from '#lib/config.js';
   import Seo from '#lib/components/Seo.svelte';
 </script>
 
@@ -34,7 +35,9 @@
 <h2>Your data, your choice</h2>
 <p>
   Use the hosted service or run the single self-host binary yourself: PostgreSQL + object storage,
-  or just SQLite and the local filesystem.
+  or just SQLite and the local filesystem. The hosted service at app.openbeehive.org is invite-only
+  for now: its public demo is open to everyone, and you can request an invite at
+  <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>.
 </p>
 
 <h2>Open source</h2>

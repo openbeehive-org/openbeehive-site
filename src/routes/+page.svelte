@@ -1,7 +1,14 @@
 <script lang="ts">
   import { _, locale } from 'svelte-i18n';
   import { changeLanguage, SUPPORTED, LANG_LABELS } from '#lib/i18n/index.js';
-  import { APP_URL, DEMO_URL, DOCS_URL, GITHUB_URL, SITE_URL } from '#lib/config.js';
+  import {
+    APP_LOGIN_URL,
+    APP_URL,
+    CONTACT_EMAIL,
+    DOCS_URL,
+    GITHUB_URL,
+    SITE_URL
+  } from '#lib/config.js';
   import Footer from '#lib/components/Footer.svelte';
   import Seo from '#lib/components/Seo.svelte';
   import Icon, { ARROW_OUT, HEX } from '#lib/components/Icon.svelte';
@@ -90,7 +97,7 @@
         >
       {/each}
     </div>
-    <a class="btn-login" href="{APP_URL}/login">{$_('nav.login')}</a>
+    <a class="btn-login" href={APP_LOGIN_URL}>{$_('nav.login')}</a>
   </nav>
 </header>
 
@@ -103,10 +110,14 @@
     <h1>{$_('landing.hero_title')}</h1>
     <p>{$_('landing.hero_sub')}</p>
     <div class="cta">
-      <a class="btn primary" href="{APP_URL}/login">{$_('landing.cta_start')}</a>
-      <a class="btn ghost" href={DEMO_URL}>{$_('landing.cta_demo')}</a>
+      <a class="btn primary" href={APP_LOGIN_URL}>{$_('landing.cta_demo')}</a>
+      <a class="btn ghost" href={APP_URL}>{$_('landing.cta_start')}</a>
       <a class="btn ghost" href={DOCS_URL}>{$_('landing.cta_docs')}</a>
     </div>
+    <p class="access">
+      {$_('landing.access_note')}
+      <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>
+    </p>
   </section>
 
   <!-- App showcase: stylized phone mock with sample records -->
@@ -193,9 +204,14 @@
     <h2>{$_('landing.cta_final_title')}</h2>
     <p>{$_('landing.cta_final_text')}</p>
     <div class="cta">
-      <a class="btn primary" href="{APP_URL}/login">{$_('landing.cta_start')}</a>
-      <a class="btn ghost" href={DEMO_URL}>{$_('landing.cta_demo')}</a>
+      <a class="btn primary" href={APP_LOGIN_URL}>{$_('landing.cta_demo')}</a>
+      <a class="btn ghost" href={APP_URL}>{$_('landing.cta_start')}</a>
+      <a class="btn ghost" href={DOCS_URL}>{$_('landing.selfhost_title')}</a>
     </div>
+    <p class="access">
+      {$_('landing.access_note')}
+      <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>
+    </p>
     <p class="disclaimer">{$_('landing.disclaimer')}</p>
   </section>
 </main>
@@ -355,6 +371,18 @@
   }
   .btn.ghost.light:focus-visible {
     outline-color: var(--on-band);
+  }
+  .hero .access,
+  .cta-final .access {
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    max-width: 60ch;
+    margin: 18px auto 0;
+    line-height: 1.55;
+  }
+  .access a {
+    color: var(--accent-text);
+    font-weight: 600;
   }
   /* Honeycomb outline behind the hero: the SVG is the mask, the colour comes from the theme. */
   .hex-field {

@@ -22,7 +22,7 @@
       <a href="/privacy">{$_('footer.privacy')}</a>
       <a href={DOCS_URL}>{$_('nav.docs')}</a>
       <a href={GITHUB_URL} rel="noopener" target="_blank">{$_('nav.github')}</a>
-      <a href="{APP_URL}/login">{$_('nav.dashboard')}</a>
+      <a href={APP_URL}>{$_('landing.cta_start')}</a>
     </nav>
   </div>
   <div class="legal">

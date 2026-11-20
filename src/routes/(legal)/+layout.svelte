@@ -1,6 +1,6 @@
 <script lang="ts">
   import { _ } from 'svelte-i18n';
-  import { APP_URL } from '#lib/config.js';
+  import { APP_LOGIN_URL } from '#lib/config.js';
   import Footer from '#lib/components/Footer.svelte';
   import Icon, { HEX } from '#lib/components/Icon.svelte';
   let { children } = $props();
@@ -12,7 +12,7 @@
       <span class="mark"><Icon d={HEX} /></span>
       <strong>{$_('app.name')}</strong>
     </a>
-    <a class="cta" href="{APP_URL}/login">{$_('landing.cta_start')}</a>
+    <a class="cta" href={APP_LOGIN_URL}>{$_('landing.cta_demo')}</a>
   </header>
 
   <main class="content">
