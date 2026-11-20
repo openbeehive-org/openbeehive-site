@@ -5,6 +5,46 @@ All notable changes to the Openbeehive website are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Dark theme. The site follows the system setting; a System / Light / Dark
+  switch in the footer overrides it and is remembered per device. The theme is
+  set before the first paint, so a saved dark theme does not flash light.
+- The landing page says that the hosted app is invite-only and that invites
+  can be requested at contact@openbeehive.org (hero, final call to action and
+  About page).
+- Privacy policy: a "Maps and address search" section discloses that the app
+  loads map tiles from OpenStreetMap and sends typed addresses and pin
+  coordinates to its Nominatim search, when that happens, and that an
+  operator can change or switch off both. It also mentions the language and
+  theme choice kept in the browser's local storage.
+
+### Changed
+
+- "Try the demo" is the primary call to action and opens the sign-in page of
+  `app.openbeehive.org`, which offers the demo. "Open the app" is the
+  secondary action for people with an account, and "Run it yourself" links to
+  the docs. `demo.openbeehive.org` is no longer linked anywhere.
+- Copy matches the product: the queen card describes marking colour, number,
+  origin, notes and queen history instead of breeding values and mating
+  stations; the final call to action no longer promises "no account hoops";
+  the self-hosting text no longer says that nothing leaves your control; the
+  privacy policy no longer says that self-hosted data never leaves your own
+  infrastructure.
+- Shared spaces are called "workspace" (de "Arbeitsbereich", fr "espace",
+  es "espacio", it "spazio") in all five languages.
+- Colours come from semantic tokens (`--bg`, `--text`, `--accent`, ...) that
+  the dark theme redefines in one block.
+
+### Fixed
+
+- Contrast in the light theme: filled buttons (white on honey was 3.2:1),
+  accent-coloured text and links, and the borders of buttons and the language
+  switch now meet WCAG AA (4.5:1 for text, 3:1 for control borders). The
+  keyboard focus ring uses a theme colour with at least 3:1 as well.
+
 ## [0.1.4] - 2026-11-20
 
 ### Security

@@ -13,9 +13,14 @@ app prerendered to static HTML; nothing runs server-side.
 - **`src/lib/i18n/`** — svelte-i18n setup and one JSON file per language
   (en, de, fr, es, it). English is the fallback; every locale carries the same
   keys (`locales.test.ts` checks it).
-- **`src/lib/config.ts`** — the URLs of the app, demo, docs and source, which
-  live on their own subdomains; the site only links to them.
-- **`src/lib/components/`** — footer, SEO head tags, not-found content.
+- **`src/lib/config.ts`** — the URLs of the app, its sign-in page (which also
+  offers the demo), docs and source, which live on their own subdomains, and
+  the contact address; the site only links to them.
+- **`src/lib/theme.ts`** — the colour theme: system, light or dark, kept per
+  device. An inline script in `src/app.html` applies the same rule before the
+  first paint; `theme.test.ts` runs that script against the module.
+- **`src/lib/components/`** — footer with the theme switch, SEO head tags,
+  not-found content.
 - **`static/`** — favicon and other files copied verbatim.
 
 ## Build and deploy
@@ -32,10 +37,15 @@ app prerendered to static HTML; nothing runs server-side.
 
 ## Decisions
 
-- **Static output, own hosting.** No server, no analytics, no cookies beyond
-  the language choice in `localStorage`; the host only serves files, so the
-  attack surface is the build toolchain, which `npm run audit` watches.
+- **Static output, own hosting.** No server, no analytics, no cookies; the
+  language and theme choice live in `localStorage`. The host only serves
+  files, so the attack surface is the build toolchain, which `npm run audit`
+  watches.
 - **Prerendered in English, switched client-side.** Crawlers get a complete
   English page; the browser then applies the saved or preferred language.
+- **Themes are token overrides.** `src/routes/+layout.svelte` defines the
+  brand palette and a set of semantic colour tokens; pages use only the
+  tokens, and the dark theme is one block that redefines them under
+  `<html data-theme="dark">`. Without JavaScript the site stays light.
 - **Separate from the app.** The site has its own repository, release cadence
   and locale files so marketing changes never touch the application build.

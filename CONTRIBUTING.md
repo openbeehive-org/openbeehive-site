@@ -31,6 +31,10 @@ output is plain static files for any CDN or static host.
 - **Keep the shared brand.** Colours (honey `#c77f22`, cream `#fbf6ea`, ink
   `#2c2316`), fonts (Fraunces for headings, Hanken Grotesk for body) and the
   hexagon mark are shared with the app. Don't diverge.
+- **Colours come from tokens.** Styles use the semantic tokens defined in
+  `src/routes/+layout.svelte` (`--bg`, `--surface`, `--text`, `--accent`, ...),
+  never raw colour values, so the dark theme stays one block of overrides.
+  Text needs a contrast of 4.5:1, control borders 3:1, in both themes.
 - **All copy is translated.** User-facing text lives in
   `src/lib/i18n/locales/*.json`. Add new strings to every locale: `en`, `de`,
   `fr`, `es`, `it`. Keys are English.

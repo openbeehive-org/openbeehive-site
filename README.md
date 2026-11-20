@@ -39,6 +39,7 @@ src/routes/(legal)/privacy          privacy
 src/lib/components/Footer.svelte    shared footer
 src/lib/i18n/                       en, de, fr, es, it translations (svelte-i18n)
 src/lib/config.ts                   APP_URL (link target for the app domain)
+src/lib/theme.ts                    colour theme: system, light or dark
 ```
 
 ## i18n
