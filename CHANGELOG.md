@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Dark theme. The site follows the system setting; a System / Light / Dark
-  switch in the footer overrides it and is remembered per device. The theme is
+  switch in the page header overrides it and is remembered per device. The theme is
   set before the first paint, so a saved dark theme does not flash light.
 - The landing page says that the hosted app is invite-only and that invites
   can be requested at contact@openbeehive.org (hero, final call to action and
@@ -44,6 +44,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   accent-coloured text and links, and the borders of buttons and the language
   switch now meet WCAG AA (4.5:1 for text, 3:1 for control borders). The
   keyboard focus ring uses a theme colour with at least 3:1 as well.
+- The self-hosting section showed `docker compose up -d` with a variable
+  named `DEPLOYMENT_PROFILE`, which starts the development stack; it now
+  shows `docker compose -f docker-compose.selfhost.yml up -d`.
+- Header links, buttons and the language and theme choice are at least
+  44 px tall. The language is a select listing each language by name (the
+  "EN" buttons were announced as "English"). On phones the header scrolls
+  away with the page.
+- The About page no longer uses the German term "Stockkarte".
 
 ## [0.1.4] - 2026-11-20
 
