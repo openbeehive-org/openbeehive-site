@@ -5,6 +5,21 @@ All notable changes to the Openbeehive website are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2026-11-20
+
+### Security
+
+- Built with `@sveltejs/adapter-static` 4.0.1 (GHSA-jf9x-2fg2-hx4w,
+  CVE-2026-128121) and `@sveltejs/kit` 3.1.1 (GHSA-mw6w-2fmv-pvw3,
+  CVE-2026-128117). The first concerns the Vercel route config the adapter
+  can generate, the second a crash of `adapter-node`; the site is prerendered
+  and served as plain files, so neither applies to openbeehive.org.
+
+### Changed
+
+- Dependencies are pinned to exact versions, and the site is built with
+  Node 24.22.3.
+
 ## [0.1.3] - 2026-10-19
 
 ### Changed
