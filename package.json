@@ -47,7 +47,8 @@
   "overrides": {
     "svelte-i18n": {
       "esbuild": "^0.25.0"
-    }
+    },
+    "minimatch": "^11.0.9"
   },
   "imports": {
     "#lib/*": "./src/lib/*"
