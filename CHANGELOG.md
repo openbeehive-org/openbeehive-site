@@ -52,6 +52,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   "EN" buttons were announced as "English"). On phones the header scrolls
   away with the page.
 - The About page no longer uses the German term "Stockkarte".
+- The language select is named in the page's language ("Sprache",
+  "Langue", "Idioma", "Lingua") instead of "Language" in every locale.
 
 ## [0.1.4] - 2026-11-20
 

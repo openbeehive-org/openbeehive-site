@@ -13,7 +13,8 @@
     "dashboard": "Panoramica",
     "apiaries": "Apiari",
     "hives": "Arnie",
-    "label": "Menu principale"
+    "label": "Menu principale",
+    "language": "Lingua"
   },
   "footer": {
     "about": "Informazioni",

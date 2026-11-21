@@ -13,7 +13,8 @@
     "dashboard": "Overview",
     "apiaries": "Apiaries",
     "hives": "Hives",
-    "label": "Main"
+    "label": "Main",
+    "language": "Language"
   },
   "footer": {
     "about": "About",

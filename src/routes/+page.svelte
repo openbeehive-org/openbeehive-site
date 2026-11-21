@@ -94,7 +94,7 @@
   <div class="tools">
     <select
       class="lang"
-      aria-label="Language"
+      aria-label={$_('nav.language')}
       value={currentLang}
       onchange={(e) => changeLanguage(e.currentTarget.value as Lang)}
     >

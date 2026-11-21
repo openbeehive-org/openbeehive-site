@@ -13,7 +13,8 @@
     "dashboard": "Resumen",
     "apiaries": "Colmenares",
     "hives": "Colmenas",
-    "label": "Menú principal"
+    "label": "Menú principal",
+    "language": "Idioma"
   },
   "footer": {
     "about": "Acerca de",

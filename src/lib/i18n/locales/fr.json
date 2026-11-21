@@ -13,7 +13,8 @@
     "dashboard": "Vue d'ensemble",
     "apiaries": "Ruchers",
     "hives": "Ruches",
-    "label": "Menu principal"
+    "label": "Menu principal",
+    "language": "Langue"
   },
   "footer": {
     "about": "À propos",

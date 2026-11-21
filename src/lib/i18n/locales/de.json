@@ -13,7 +13,8 @@
     "dashboard": "Übersicht",
     "apiaries": "Standorte",
     "hives": "Beuten",
-    "label": "Hauptmenü"
+    "label": "Hauptmenü",
+    "language": "Sprache"
   },
   "footer": {
     "about": "Über Openbeehive",
