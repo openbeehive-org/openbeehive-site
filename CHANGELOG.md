@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-21
+
 ### Added
 
 - Dark theme. The site follows the system setting; a System / Light / Dark
@@ -116,7 +118,8 @@ First public release. 🐝
 - Multi-language: English, German, French, Spanish, Italian.
 - Fully static build via `@sveltejs/adapter-static` — deployable to any CDN.
 
-[Unreleased]: https://github.com/openbeehive-org/openbeehive-site/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/openbeehive-org/openbeehive-site/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/openbeehive-org/openbeehive-site/releases/tag/v0.2.0
 [0.1.2]: https://github.com/openbeehive-org/openbeehive-site/releases/tag/v0.1.2
 [0.1.1]: https://github.com/openbeehive-org/openbeehive-site/releases/tag/v0.1.1
 [0.1.0]: https://github.com/openbeehive-org/openbeehive-site/releases/tag/v0.1.0
