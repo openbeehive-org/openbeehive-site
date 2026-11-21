@@ -12,14 +12,16 @@
     "login": "Se connecter",
     "dashboard": "Vue d'ensemble",
     "apiaries": "Ruchers",
-    "hives": "Ruches"
+    "hives": "Ruches",
+    "label": "Menu principal"
   },
   "footer": {
     "about": "À propos",
     "imprint": "Mentions légales",
     "privacy": "Confidentialité",
     "license": "AGPL-3.0",
-    "tagline": "Carnet d'apiculture, même hors ligne."
+    "tagline": "Carnet d'apiculture, même hors ligne.",
+    "label": "Mentions légales et projet"
   },
   "theme": {
     "label": "Thème",

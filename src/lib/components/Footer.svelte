@@ -15,7 +15,7 @@
         <small>{$_('footer.tagline')}</small>
       </div>
     </div>
-    <nav class="links">
+    <nav class="links" aria-label={$_('footer.label')}>
       <a href="/about">{$_('footer.about')}</a>
       <a href="/imprint">{$_('footer.imprint')}</a>
       <a href="/privacy">{$_('footer.privacy')}</a>

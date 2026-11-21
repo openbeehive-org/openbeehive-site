@@ -12,14 +12,16 @@
     "login": "Sign in",
     "dashboard": "Overview",
     "apiaries": "Apiaries",
-    "hives": "Hives"
+    "hives": "Hives",
+    "label": "Main"
   },
   "footer": {
     "about": "About",
     "imprint": "Imprint",
     "privacy": "Privacy",
     "license": "AGPL-3.0",
-    "tagline": "Offline-first beekeeping records."
+    "tagline": "Offline-first beekeeping records.",
+    "label": "Legal and project"
   },
   "theme": {
     "label": "Theme",

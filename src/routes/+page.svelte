@@ -84,7 +84,7 @@
       <small>{$_('app.tagline')}</small>
     </div>
   </a>
-  <nav>
+  <nav aria-label={$_('nav.label')}>
     <a class="navlink" href="#features">{$_('nav.features')}</a>
     <a class="navlink" href="#why">{$_('nav.why')}</a>
     <a class="navlink" href="#selfhost">{$_('nav.selfhost')}</a>

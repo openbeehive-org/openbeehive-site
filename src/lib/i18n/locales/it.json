@@ -12,14 +12,16 @@
     "login": "Accedi",
     "dashboard": "Panoramica",
     "apiaries": "Apiari",
-    "hives": "Arnie"
+    "hives": "Arnie",
+    "label": "Menu principale"
   },
   "footer": {
     "about": "Informazioni",
     "imprint": "Note legali",
     "privacy": "Privacy",
     "license": "AGPL-3.0",
-    "tagline": "Registro apistico offline-first."
+    "tagline": "Registro apistico offline-first.",
+    "label": "Note legali e progetto"
   },
   "theme": {
     "label": "Tema",

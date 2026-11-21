@@ -12,14 +12,16 @@
     "login": "Anmelden",
     "dashboard": "Übersicht",
     "apiaries": "Standorte",
-    "hives": "Beuten"
+    "hives": "Beuten",
+    "label": "Hauptmenü"
   },
   "footer": {
     "about": "Über Openbeehive",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "license": "AGPL-3.0",
-    "tagline": "Offline-first Imker-Buchführung."
+    "tagline": "Offline-first Imker-Buchführung.",
+    "label": "Rechtliches und Projekt"
   },
   "theme": {
     "label": "Darstellung",

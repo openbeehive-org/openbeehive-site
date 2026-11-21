@@ -12,14 +12,16 @@
     "login": "Iniciar sesión",
     "dashboard": "Resumen",
     "apiaries": "Colmenares",
-    "hives": "Colmenas"
+    "hives": "Colmenas",
+    "label": "Menú principal"
   },
   "footer": {
     "about": "Acerca de",
     "imprint": "Aviso legal",
     "privacy": "Privacidad",
     "license": "AGPL-3.0",
-    "tagline": "Cuaderno de apicultura, incluso sin conexión."
+    "tagline": "Cuaderno de apicultura, incluso sin conexión.",
+    "label": "Aviso legal y proyecto"
   },
   "theme": {
     "label": "Tema",
