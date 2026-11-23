@@ -8,7 +8,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "tools": "go install github.com/fleetlint/fleetlint/cmd/fleetlint@v0.5.1 && go install github.com/zricethezav/gitleaks/v8@v8.30.1",
+    "tools": "go install github.com/fleetlint/fleetlint/cmd/fleetlint@v0.11.1 && go install github.com/zricethezav/gitleaks/v8@v8.30.1",
     "fmt": "prettier --write . && eslint --fix .",
     "lint": "svelte-kit sync && prettier --check . && eslint --max-warnings=0 . && svelte-check --tsconfig ./tsconfig.json",
     "test": "vitest run",
