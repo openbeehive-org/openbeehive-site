@@ -75,9 +75,9 @@
   coordinates named above, none of your records, photos or account details are sent. Nothing is sent
   to OpenStreetMap as long as no map is shown and no address is looked up. How OpenStreetMap handles
   this data is described in the
-  <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener" target="_blank"
-    >OSMF privacy policy</a
-  >.
+  <a href="https://osmfoundation.org/wiki/Privacy_Policy" rel="noopener" target="_blank">
+    OSMF privacy policy
+  </a>.
 </p>
 <p>
   The operator of an Openbeehive server can point the app to a different map and address service or

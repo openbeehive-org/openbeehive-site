@@ -18,5 +18,7 @@
   stroke-width="2"
   stroke-linecap="round"
   stroke-linejoin="round"
-  aria-hidden="true"><path {d} /></svg
+  aria-hidden="true"
 >
+  <path {d} />
+</svg>

@@ -43,12 +43,12 @@
 <h2>Open source</h2>
 <p>
   Openbeehive is free and open source, licensed under the
-  <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="noopener" target="_blank"
-    >GNU AGPL-3.0</a
-  >. The source lives on
-  <a href="https://github.com/openbeehive-org/openbeehive-app" rel="noopener" target="_blank"
-    >GitHub</a
-  >. It is built and maintained by Johannes Küber, a beekeeper. Contributions, bug reports and
+  <a href="https://www.gnu.org/licenses/agpl-3.0.html" rel="noopener" target="_blank">
+    GNU AGPL-3.0
+  </a>. The source lives on
+  <a href="https://github.com/openbeehive-org/openbeehive-app" rel="noopener" target="_blank">
+    GitHub
+  </a>. It is built and maintained by Johannes Küber, a beekeeper. Contributions, bug reports and
   translations from the community are very welcome.
 </p>
 
