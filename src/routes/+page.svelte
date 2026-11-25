@@ -110,9 +110,9 @@
 <main>
   <section class="hero">
     <div class="hex-field" aria-hidden="true"></div>
-    <span class="badge"
-      ><img src="/favicon.svg" alt="" width="16" height="16" />{$_('landing.badge')}</span
-    >
+    <span class="badge">
+      <img src="/favicon.svg" alt="" width="16" height="16" />{$_('landing.badge')}
+    </span>
     <h1>{$_('landing.hero_title')}</h1>
     <p>{$_('landing.hero_sub')}</p>
     <div class="cta">
@@ -191,9 +191,10 @@
         <h2>{$_('landing.opensource_title')}</h2>
         <p>{$_('landing.opensource_text')}</p>
       </div>
-      <a class="btn ghost light" href={GITHUB_URL} rel="noopener" target="_blank"
-        >{$_('landing.opensource_cta')} <Icon d={ARROW_OUT} /></a
-      >
+      <a class="btn ghost light" href={GITHUB_URL} rel="noopener" target="_blank">
+        {$_('landing.opensource_cta')}
+        <Icon d={ARROW_OUT} />
+      </a>
     </div>
   </section>
 
